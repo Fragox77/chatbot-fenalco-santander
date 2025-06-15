@@ -1,0 +1,275 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hola
+    - buenos días
+    - buenas tardes
+    - buenas noches
+    - saludos
+    - qué tal
+    - hola bot
+    - hello
+    - hi
+    - hey
+    - buen día
+
+- intent: goodbye
+  examples: |
+    - adiós
+    - hasta luego
+    - nos vemos
+    - bye
+    - chao
+    - hasta pronto
+    - me voy
+    - gracias por todo
+    - ya me despido
+    - hasta la vista
+
+- intent: affirm
+  examples: |
+    - sí
+    - si
+    - claro
+    - por supuesto
+    - exacto
+    - correcto
+    - ok
+    - está bien
+    - de acuerdo
+    - perfecto
+    - me parece bien
+
+- intent: deny
+  examples: |
+    - no
+    - no gracias
+    - nope
+    - no me interesa
+    - para nada
+    - no es lo que busco
+    - no es correcto
+    - negativo
+
+- intent: ask_diplomados
+  examples: |
+    - quiero información sobre diplomados
+    - qué diplomados tienen
+    - diplomados disponibles
+    - cuáles son los diplomados
+    - diplomados empresariales
+    - me interesan los diplomados
+    - diplomado en gestión comercial
+    - diplomado en legislación
+    - diplomado transformación digital
+    - diplomado gerencia de proyectos
+    - necesito hacer un diplomado
+
+- intent: ask_talleres
+  examples: |
+    - talleres disponibles
+    - qué talleres ofrecen
+    - talleres empresariales
+    - taller de liderazgo
+    - taller comunicación
+    - talleres especializados
+    - capacitaciones cortas
+    - cursos talleres
+    - me interesan talleres
+
+- intent: ask_seminarios
+  examples: |
+    - seminarios
+    - qué seminarios tienen
+    - conferencias disponibles
+    - eventos próximos
+    - seminario retail
+    - conferencia innovación
+    - charlas empresariales
+    - seminarios especializados
+
+- intent: ask_masterclass
+  examples: |
+    - masterclass
+    - master class
+    - masterclass ejecutivas
+    - sesiones con expertos
+    - masterclass estrategia
+    - masterclass finanzas
+    - clases magistrales
+    - capacitación ejecutiva
+
+- intent: ask_bootcamps
+  examples: |
+    - bootcamps
+    - boot camps
+    - programas intensivos
+    - bootcamp marketing
+    - bootcamp ventas
+    - capacitación intensiva
+    - cursos acelerados
+
+- intent: ask_precios
+  examples: |
+    - cuánto cuesta
+    - precios
+    - valor de los cursos
+    - costo diplomados
+    - precio talleres
+    - inversión
+    - tarifas
+    - cuánto vale
+    - información de precios
+    - presupuesto necesario
+
+- intent: ask_modalidades
+  examples: |
+    - modalidades
+    - virtual o presencial
+    - cómo son las clases
+    - modalidad de estudio
+    - clases virtuales
+    - clases presenciales
+    - formato del curso
+    - híbrido
+    - en línea
+
+- intent: ask_horarios
+  examples: |
+    - horarios
+    - qué horarios tienen
+    - cuándo son las clases
+    - horarios disponibles
+    - jornadas
+    - horario nocturno
+    - horario diurno
+    - fines de semana
+    - flexibilidad horaria
+
+- intent: ask_inscripcion
+  examples: |
+    - cómo me inscribo
+    - proceso de inscripción
+    - inscripciones
+    - matrícula
+    - cómo aplicar
+    - requisitos inscripción
+    - documentos necesarios
+    - registro
+    - quiero inscribirme
+
+- intent: ask_certificacion
+  examples: |
+    - certificado
+    - certificación
+    - título
+    - diploma
+    - reconocimiento
+    - qué certificado dan
+    - validez del certificado
+    - acreditación
+
+- intent: ask_contacto
+  examples: |
+    - información de contacto
+    - teléfono
+    - dirección
+    - email
+    - cómo contactarlos
+    - dónde están ubicados
+    - página web
+    - redes sociales
+    - oficinas
+
+- intent: ask_descuentos
+  examples: |
+    - descuentos
+    - promociones
+    - ofertas
+    - beneficios
+    - descuento empresas
+    - descuento grupos
+    - becas
+    - financiación
+    - planes de pago
+
+- intent: ask_programa_especifico
+  examples: |
+    - [gestión comercial](programa_nombre)
+    - [legislación comercial](programa_nombre)
+    - [transformación digital](programa_nombre)
+    - [gerencia de proyectos](programa_nombre)
+    - [liderazgo empresarial](programa_nombre)
+    - [comunicación asertiva](programa_nombre)
+    - [inteligencia emocional](programa_nombre)
+    - [marketing digital](programa_nombre)
+    - [ventas consultivas](programa_nombre)
+
+- intent: bot_challenge
+  examples: |
+    - eres un bot?
+    - eres humano?
+    - con quién hablo?
+    - eres real?
+    - eres una máquina?
+    - bot o persona?
+
+- intent: chitchat
+  examples: |
+    - cómo estás
+    - qué tal el día
+    - cómo te va
+    - todo bien?
+    - qué haces
+    - cuéntame algo
+    - tienes familia?
+    - te gusta tu trabajo?
+
+- lookup: programa_tipo
+  examples: |
+    - diplomado
+    - taller
+    - seminario
+    - masterclass
+    - bootcamp
+    - curso
+    - capacitación
+
+- lookup: modalidad
+  examples: |
+    - virtual
+    - presencial
+    - híbrido
+    - en línea
+    - online
+    - remoto
+    - a distancia
+
+- synonym: "diplomado"
+  examples: |
+    - diplomados
+    - programa diplomado
+    - diplomado empresarial
+
+- synonym: "taller"
+  examples: |
+    - talleres
+    - workshop
+    - capacitación práctica
+
+- synonym: "virtual"
+  examples: |
+    - online
+    - en línea
+    - remoto
+    - a distancia
+    - digital
+
+- synonym: "presencial"
+  examples: |
+    - físico
+    - cara a cara
+    - in situ
+    - en persona

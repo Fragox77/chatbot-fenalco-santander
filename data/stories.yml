@@ -1,0 +1,146 @@
+version: "3.1"
+
+stories:
+
+- story: saludo básico
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: consulta diplomados
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_diplomados
+  - action: utter_diplomados_info
+
+- story: consulta talleres
+  steps:
+  - intent: ask_talleres
+  - action: utter_talleres_info
+
+- story: consulta precios después de diplomados
+  steps:
+  - intent: ask_diplomados
+  - action: utter_diplomados_info
+  - intent: ask_precios
+  - action: utter_precios_info
+
+- story: consulta modalidades
+  steps:
+  - intent: ask_modalidades
+  - action: utter_modalidades_info
+
+- story: consulta horarios
+  steps:
+  - intent: ask_horarios
+  - action: utter_horarios_info
+
+- story: proceso de inscripción
+  steps:
+  - intent: ask_inscripcion
+  - action: utter_inscripcion_info
+
+- story: información de contacto
+  steps:
+  - intent: ask_contacto
+  - action: utter_contacto_info
+
+- story: consulta certificación
+  steps:
+  - intent: ask_certificacion
+  - action: utter_certificacion_info
+
+- story: consulta seminarios y masterclass
+  steps:
+  - intent: ask_seminarios
+  - action: utter_seminarios_info
+  - intent: ask_masterclass
+  - action: utter_masterclass_info
+
+- story: consulta bootcamps
+  steps:
+  - intent: ask_bootcamps
+  - action: utter_bootcamps_info
+
+- story: flujo completo información
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_diplomados
+  - action: utter_diplomados_info
+  - intent: ask_precios
+  - action: utter_precios_info
+  - intent: ask_inscripcion
+  - action: utter_inscripcion_info
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: consulta descuentos
+  steps:
+  - intent: ask_descuentos
+  - action: utter_precios_info
+
+- story: bot challenge
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- story: despedida
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: flujo talleres a inscripción
+  steps:
+  - intent: ask_talleres
+  - action: utter_talleres_info
+  - intent: ask_inscripcion
+  - action: utter_inscripcion_info
+
+- story: consulta modalidades y horarios
+  steps:
+  - intent: ask_modalidades
+  - action: utter_modalidades_info
+  - intent: ask_horarios
+  - action: utter_horarios_info
+
+- story: programa específico a contacto
+  steps:
+  - intent: ask_programa_especifico
+  - action: utter_diplomados_info
+  - intent: ask_contacto
+  - action: utter_contacto_info
+
+- story: masterclass a certificación
+  steps:
+  - intent: ask_masterclass
+  - action: utter_masterclass_info
+  - intent: ask_certificacion
+  - action: utter_certificacion_info
+
+- story: bootcamp a modalidades
+  steps:
+  - intent: ask_bootcamps
+  - action: utter_bootcamps_info
+  - intent: ask_modalidades
+  - action: utter_modalidades_info
+
+- story: precios a descuentos
+  steps:
+  - intent: ask_precios
+  - action: utter_precios_info
+  - intent: ask_descuentos
+  - action: utter_precios_info
+
+- story: seminarios a horarios
+  steps:
+  - intent: ask_seminarios
+  - action: utter_seminarios_info
+  - intent: ask_horarios
+  - action: utter_horarios_info
+
+- story: fallback a información general
+  steps:
+  - intent: nlu_fallback
+  - action: utter_default

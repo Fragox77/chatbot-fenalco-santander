@@ -1,0 +1,41 @@
+# Configuración del pipeline de Rasa para Fenalco Santander
+version: "3.1"
+
+assistant_id: fenalco_santander_assistant
+
+# Configuración del pipeline NLU
+recipe: default.v1
+language: es
+
+pipeline:
+  # Tokenización para español
+  - name: WhitespaceTokenizer
+  - name: RegexFeaturizer
+  - name: LexicalSyntacticFeaturizer
+  - name: CountVectorsFeaturizer
+  - name: CountVectorsFeaturizer
+    analyzer: char_wb
+    min_ngram: 1
+    max_ngram: 4
+  # Clasificador de intenciones
+  - name: DIETClassifier
+    epochs: 100
+    constrain_similarities: true
+  # Extractor de entidades
+  - name: EntitySynonymMapper
+  - name: ResponseSelector
+    epochs: 100
+    constrain_similarities: true
+    retrieval_intent: chitchat
+
+# Configuración de políticas (CORREGIDAS)
+policies:
+  - name: MemoizationPolicy
+  - name: RulePolicy
+    core_fallback_threshold: 0.4
+    core_fallback_action_name: "action_default_fallback"
+    enable_fallback_prediction: True
+  - name: TEDPolicy
+    max_history: 5
+    epochs: 100
+    constrain_similarities: true

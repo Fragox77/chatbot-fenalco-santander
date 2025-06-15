@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centro de Formación Empresarial - Fenalco Santander</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-brand">
+                <img src="images/isotipo.png" alt="Fenalco Logo" class="logo">
+                <div class="brand-text">
+                    <h1>Fenalco Santander</h1>
+                    <p>Centro de Formación Empresarial</p>
+                </div>
+            </div>
+            <nav class="nav-menu">
+                <a href="#inicio" class="nav-link active">Inicio</a>
+                <a href="#programas" class="nav-link">Programas</a>
+                <a href="#contacto" class="nav-link">Contacto</a>
+            </nav>
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h2>Impulsa tu Crecimiento Profesional</h2>
+                    <p>Descubre nuestros programas de formación empresarial diseñados para potenciar tu carrera y transformar tu organización.</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="openChat()">
+                            <i class="fas fa-comments"></i> Consultar Programas
+                        </button>
+                        <a href="#programas" class="btn btn-secondary">Ver Catálogo</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-graphic">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programas Section -->
+    <section class="programs" id="programas">
+        <div class="container">
+            <h2 class="section-title">Nuestros Programas</h2>
+            <div class="programs-grid">
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Diplomados</h3>
+                    <p>Programas especializados de 80-120 horas en gestión comercial, legislación y transformación digital.</p>
+                    <div class="program-price">Desde $720.000</div>
+                </div>
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Talleres</h3>
+                    <p>Capacitaciones prácticas en liderazgo, comunicación e inteligencia emocional.</p>
+                    <div class="program-price">Desde $250.000</div>
+                </div>
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Bootcamps</h3>
+                    <p>Programas intensivos para resultados inmediatos en marketing digital y ventas.</p>
+                    <div class="program-price">Desde $590.000</div>
+                </div>
+                <div class="program-card">
+                    <div class="program-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Masterclass</h3>
+                    <p>Sesiones exclusivas con expertos en estrategia empresarial y finanzas.</p>
+                    <div class="program-price">Desde $450.000</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature">
+                    <i class="fas fa-laptop"></i>
+                    <h3>Modalidad Flexible</h3>
+                    <p>Virtual, presencial o híbrida según tus necesidades</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-medal"></i>
+                    <h3>Certificación Oficial</h3>
+                    <p>Reconocimiento empresarial y certificado digital</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-percentage"></i>
+                    <h3>Descuentos Especiales</h3>
+                    <p>15% empresas afiliadas, 10% grupos de 3+ personas</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-headset"></i>
+                    <h3>Soporte 24/7</h3>
+                    <p>Asistencia académica y técnica permanente</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contacto">
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Contáctanos</h2>
+                    <p>Estamos aquí para resolver tus dudas y ayudarte a elegir el programa ideal.</p>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>(607) 697-5555</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7e18110c131f1d1711103e181b101f121d110d1f100a1f101a1b0c501d1113">[email&#160;protected]</a></span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Calle 35 No. 10-43, Bucaramanga</span>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <input type="text" placeholder="Nombre completo" required>
+                        <input type="email" placeholder="Correo electrónico" required>
+                        <input type="tel" placeholder="Teléfono" required>
+                        <select required>
+                            <option value="">Programa de interés</option>
+                            <option value="diplomados">Diplomados</option>
+                            <option value="talleres">Talleres</option>
+                            <option value="bootcamps">Bootcamps</option>
+                            <option value="masterclass">Masterclass</option>
+                        </select>
+                        <textarea placeholder="Mensaje (opcional)" rows="4"></textarea>
+                        <button type="submit" class="btn btn-primary">Enviar Consulta</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chat Widget -->
+    <div class="chat-widget" id="chatWidget">
+        <div class="chat-header">
+            <div class="chat-header-info">
+                <div class="chat-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="chat-header-text">
+                    <h4>Asistente Fenalco</h4>
+                    <span class="chat-status">En línea</span>
+                </div>
+            </div>
+            <button class="chat-close" onclick="closeChat()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot-message">
+                <div class="message-content">
+                    ¡Hola! Soy tu asistente virtual de Fenalco Santander. ¿En qué puedo ayudarte hoy?
+                </div>
+                <div class="message-time">Ahora</div>
+            </div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="chatInput" placeholder="Escribe tu pregunta..." onkeypress="handleKeyPress(event)">
+            <button onclick="sendMessage()" id="sendButton">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Chat Button -->
+    <button class="chat-button" id="chatButton" onclick="toggleChat()">
+        <i class="fas fa-comments"></i>
+        <span class="chat-notification" id="chatNotification">1</span>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="images/isotipo.png" alt="Fenalco Logo" class="footer-logo">
+                    <p>Centro de Formación Empresarial<br>Fenalco Santander</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Enlaces Rápidos</h4>
+                    <a href="#inicio">Inicio</a>
+                    <a href="#programas">Programas</a>
+                    <a href="#contacto">Contacto</a>
+                </div>
+                <div class="footer-social">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Fenalco Santander. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/script.js"></script>
+</body>
+</html>

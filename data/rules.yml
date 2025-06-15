@@ -1,0 +1,83 @@
+version: "3.1"
+
+rules:
+
+- rule: Responder a saludo
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Responder a despedida
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Responder pregunta sobre bot
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Información diplomados
+  steps:
+  - intent: ask_diplomados
+  - action: utter_diplomados_info
+
+- rule: Información talleres
+  steps:
+  - intent: ask_talleres
+  - action: utter_talleres_info
+
+- rule: Información seminarios
+  steps:
+  - intent: ask_seminarios
+  - action: utter_seminarios_info
+
+- rule: Información masterclass
+  steps:
+  - intent: ask_masterclass
+  - action: utter_masterclass_info
+
+- rule: Información bootcamps
+  steps:
+  - intent: ask_bootcamps
+  - action: utter_bootcamps_info
+
+- rule: Información precios
+  steps:
+  - intent: ask_precios
+  - action: utter_precios_info
+
+- rule: Información modalidades
+  steps:
+  - intent: ask_modalidades
+  - action: utter_modalidades_info
+
+- rule: Información horarios
+  steps:
+  - intent: ask_horarios
+  - action: utter_horarios_info
+
+- rule: Información inscripción
+  steps:
+  - intent: ask_inscripcion
+  - action: utter_inscripcion_info
+
+- rule: Información certificación
+  steps:
+  - intent: ask_certificacion
+  - action: utter_certificacion_info
+
+- rule: Información contacto
+  steps:
+  - intent: ask_contacto
+  - action: utter_contacto_info
+
+- rule: Información descuentos
+  steps:
+  - intent: ask_descuentos
+  - action: utter_precios_info
+
+- rule: Respuesta por defecto
+  steps:
+  - intent: nlu_fallback
+  - action: utter_default

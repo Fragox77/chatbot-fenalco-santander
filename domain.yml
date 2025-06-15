@@ -1,0 +1,270 @@
+version: "3.1"
+
+# Intenciones que el bot puede reconocer
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - ask_diplomados
+  - ask_talleres
+  - ask_seminarios
+  - ask_masterclass
+  - ask_bootcamps
+  - ask_precios
+  - ask_modalidades
+  - ask_horarios
+  - ask_inscripcion
+  - ask_certificacion
+  - ask_contacto
+  - ask_descuentos
+  - ask_programa_especifico
+  - chitchat
+
+# Entidades que el bot puede extraer
+entities:
+  - programa_tipo
+  - programa_nombre
+  - modalidad
+  - duracion
+  - precio_rango
+
+# Slots para mantener información de la conversación
+slots:
+  programa_interes:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: programa_tipo
+  
+  modalidad_preferida:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: modalidad
+  
+  presupuesto:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: precio_rango
+
+# Respuestas del bot
+responses:
+  utter_greet:
+  - text: "¡Bienvenido al Centro de Formación Empresarial de Fenalco Santander! 🎓"
+  - text: "¡Hola! Soy tu asistente de capacitación empresarial. ¿En qué puedo ayudarte hoy?"
+  - text: "¡Saludos! Estoy aquí para ayudarte con información sobre nuestros programas de formación."
+
+  utter_goodbye:
+  - text: "¡Hasta pronto! Recuerda que estamos aquí para impulsar tu crecimiento profesional."
+  - text: "¡Que tengas un excelente día! No dudes en contactarnos para más información."
+  - text: "¡Gracias por tu interés en Fenalco Santander! Te esperamos en nuestros programas."
+
+  utter_iamabot:
+  - text: "Soy el asistente virtual de Fenalco Santander, especializado en programas de formación empresarial."
+
+  utter_diplomados_info:
+  - text: |
+      🎓 **DIPLOMADOS DISPONIBLES**
+      
+      1. **Diplomado en Gestión Comercial y Ventas**
+         • Duración: 120 horas
+         • Modalidad: Virtual/Presencial
+         • Inversión: $850.000
+      
+      2. **Diplomado en Legislación Comercial**
+         • Duración: 100 horas
+         • Modalidad: Virtual
+         • Inversión: $720.000
+      
+      3. **Diplomado en Transformación Digital**
+         • Duración: 80 horas
+         • Modalidad: Virtual
+         • Inversión: $950.000
+      
+      4. **Diplomado en Gerencia de Proyectos**
+         • Duración: 90 horas
+         • Modalidad: Presencial/Virtual
+         • Inversión: $890.000
+      
+      ¿Te interesa información específica de algún diplomado?
+
+  utter_talleres_info:
+  - text: |
+      👥 **TALLERES ESPECIALIZADOS**
+      
+      1. **Taller de Liderazgo Empresarial**
+         • 16 horas - Presencial - $320.000
+      
+      2. **Taller de Comunicación Asertiva**
+         • 12 horas - Virtual - $250.000
+      
+      3. **Taller de Inteligencia Emocional**
+         • 20 horas - Presencial - $380.000
+      
+      Desarrolla competencias específicas con metodología práctica.
+
+  utter_seminarios_info:
+  - text: |
+      📚 **SEMINARIOS Y CONFERENCIAS**
+      
+      1. **Seminario de Tendencias del Retail**
+         • 8 horas - Presencial - $180.000
+      
+      2. **Conferencia de Innovación Empresarial**
+         • 4 horas - Virtual - $120.000
+      
+      Mantente actualizado con las últimas tendencias del sector.
+
+  utter_masterclass_info:
+  - text: |
+      🏆 **MASTERCLASS EJECUTIVAS**
+      
+      1. **Masterclass en Estrategia Empresarial**
+         • 6 horas - Virtual - $450.000
+      
+      2. **Masterclass en Finanzas para No Financieros**
+         • 8 horas - Presencial - $520.000
+      
+      Sesiones exclusivas con expertos reconocidos.
+
+  utter_bootcamps_info:
+  - text: |
+      ⚡ **BOOTCAMPS INTENSIVOS**
+      
+      1. **Bootcamp de Marketing Digital**
+         • 40 horas - Virtual - $680.000
+      
+      2. **Bootcamp de Ventas Consultivas**
+         • 32 horas - Presencial - $590.000
+      
+      Programas intensivos para resultados inmediatos.
+
+  utter_precios_info:
+  - text: |
+      💰 **INFORMACIÓN DE INVERSIÓN**
+      
+      • **Diplomados:** $720.000 - $950.000
+      • **Talleres:** $250.000 - $380.000
+      • **Seminarios:** $120.000 - $180.000
+      • **Masterclass:** $450.000 - $520.000
+      • **Bootcamps:** $590.000 - $680.000
+      
+      💡 **Descuentos disponibles:**
+      • 15% empresas afiliadas a Fenalco
+      • 10% grupos de 3+ personas
+      • 5% pronto pago
+
+  utter_modalidades_info:
+  - text: |
+      📱💻 **MODALIDADES DE ESTUDIO**
+      
+      **VIRTUAL:**
+      • Clases en vivo con interacción
+      • Plataforma LMS disponible 24/7
+      • Grabaciones para repaso
+      
+      **PRESENCIAL:**
+      • Metodología práctica
+      • Networking empresarial
+      • Laboratorios especializados
+      
+      **HÍBRIDA:**
+      • Lo mejor de ambas modalidades
+      • Flexibilidad de horarios
+      
+      Todas incluyen certificado y material didáctico.
+
+  utter_horarios_info:
+  - text: |
+      ⏰ **HORARIOS DISPONIBLES**
+      
+      **JORNADA DIURNA:**
+      • Lunes a Viernes: 8:00 AM - 12:00 PM
+      • Sábados: 8:00 AM - 5:00 PM
+      
+      **JORNADA NOCTURNA:**
+      • Lunes a Viernes: 6:00 PM - 10:00 PM
+      
+      **VIRTUALES:**
+      • Flexibilidad de horarios
+      • Sesiones sincrónicas programadas
+      
+      **INTENSIVOS:**
+      • Fines de semana completos
+
+  utter_inscripcion_info:
+  - text: |
+      📝 **PROCESO DE INSCRIPCIÓN**
+      
+      **Paso 1:** Selecciona tu programa
+      **Paso 2:** Completa formulario en línea
+      **Paso 3:** Realiza el pago
+      **Paso 4:** Recibe confirmación y accesos
+      
+      **Documentos:**
+      • Cédula de ciudadanía
+      • Hoja de vida actualizada
+      
+      **Formas de pago:**
+      💳 Tarjeta de crédito/débito
+      💰 Transferencia bancaria
+      🏦 Consignación
+
+  utter_certificacion_info:
+  - text: |
+      📜 **CERTIFICACIONES**
+      
+      Al completar obtienes:
+      🏆 Certificado oficial Fenalco Santander
+      📊 Evaluación de competencias
+      💼 Reconocimiento empresarial
+      🔗 Certificado digital verificable
+      
+      **Requisitos:**
+      • Asistencia mínima 80%
+      • Aprobación de evaluaciones
+      • Entrega de trabajos (cuando aplique)
+
+  utter_contacto_info:
+  - text: |
+      📞 **INFORMACIÓN DE CONTACTO**
+      
+      **Teléfono:** (607) 697-5555
+      **Email:** formacion@fenalcosantander.com
+      **Dirección:** Calle 35 No. 10-43, Bucaramanga
+      **Horarios:** Lunes a Viernes 8:00 AM - 6:00 PM
+                   Sábados 8:00 AM - 12:00 PM
+      **Web:** www.formacionfenalcosantander.com
+      
+      ¡Contáctanos para resolver tus dudas!
+
+  utter_default:
+  - text: "Te puedo ayudar con información sobre diplomados, talleres, seminarios, masterclass, bootcamps, precios, horarios e inscripciones. ¿Qué te interesa saber?"
+  - text: "Puedo darte información detallada sobre nuestros programas de formación. ¿Sobre qué tema específico quieres saber más?"
+
+# Acciones personalizadas
+actions:
+  - action_buscar_programa
+  - action_calcular_descuento
+  - action_verificar_disponibilidad
+  - action_generar_cotizacion
+
+# Formularios para recopilar información
+forms:
+  solicitud_informacion_form:
+    required_slots:
+      - programa_interes
+      - modalidad_preferida
+
+# Configuración de sesión
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

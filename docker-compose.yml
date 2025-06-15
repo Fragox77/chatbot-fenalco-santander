@@ -1,0 +1,61 @@
+version: '3.8'
+
+services:
+  rasa:
+    build: .
+    ports:
+      - "5005:5005"
+    volumes:
+      - ./models:/app/models
+      - ./data:/app/data
+    environment:
+      - RASA_MODEL_PATH=/app/models
+    depends_on:
+      - mongo
+      - redis
+    command: rasa run --enable-api --cors "*" --debug
+
+  rasa-actions:
+    build: .
+    ports:
+      - "5055:5055"
+    volumes:
+      - .:/app
+    depends_on:
+      - mongo
+      - redis
+    command: rasa run actions --debug
+
+  mongo:
+    image: mongo:5.0
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=password123
+      - MONGO_INITDB_DATABASE=fenalco_chatbot
+    volumes:
+      - mongodb_data:/data/db
+      - ./init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+
+  web-scraper:
+    build: .
+    depends_on:
+      - mongo
+    volumes:
+      - .:/app
+    environment:
+      - MONGO_URI=mongodb://admin:password123@mongo:27017/fenalco_chatbot?authSource=admin
+    command: python scraper/web_scraper.py
+    restart: unless-stopped
+
+volumes:
+  mongodb_data:
+  redis_data:

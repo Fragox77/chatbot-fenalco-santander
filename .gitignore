@@ -1,0 +1,56 @@
+# Crear archivo .gitignore para el proyecto del chatbot
+gitignore_content = """# Entornos virtuales de Python
+chatbot_env/
+venv/
+env/
+.env
+
+# Modelos entrenados de Rasa (son grandes)
+models/
+*.tar.gz
+
+# Archivos de Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Archivos de configuración local
+.vscode/settings.json
+.idea/
+
+# Logs
+*.log
+logs/
+
+# Archivos temporales
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# Archivos de respaldo
+*.bak
+*.backup
+
+# Dependencias de Node.js (si las usas)
+node_modules/
+
+# Archivos de sistema
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Archivos específicos de Rasa
+.rasa/
+rasa.db
+"""
+
+with open('.gitignore', 'w', encoding='utf-8') as f:
+    f.write(gitignore_content)
+
+print("Archivo .gitignore creado exitosamente")
