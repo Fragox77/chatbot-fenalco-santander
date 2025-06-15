@@ -169,19 +169,19 @@ Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE](LICENSE) par
 
 ## 👥 Autores
 
-- **Tu Nombre** - *Desarrollo inicial* - [tu-usuario](https://github.com/tu-usuario)
+- **Jhon Fragozo - Diego Merchan** - *Desarrollo inicial* - [Fragox77]([https://github.com/tu-usuario](https://github.com/Fragox77))
 
 ## 🙏 Agradecimientos
 
 - Fenalco Santander por la oportunidad del proyecto
+- Talento Tech por la oportunidad del Bootcamp en IA
+- Al Porfesor Jorge por su paciencia y aporte con su conocimiento
 - Comunidad de Rasa por la documentación y soporte
-- Contribuidores del proyecto
 
 ## 📞 Contacto
 
-- Email: tu-email@ejemplo.com
-- LinkedIn: [tu-perfil](https://linkedin.com/in/tu-perfil)
-- GitHub: [@tu-usuario](https://github.com/tu-usuario)
+- Email: jhonfragozo@gmail.com
+- GitHub: [Fragox77]([https://github.com/tu-usuario](https://github.com/Fragox77))
 
 ---
 
